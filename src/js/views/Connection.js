@@ -2,12 +2,11 @@ import React from "react";
 import { CharacterCard } from "../component/characterCard";
 import "../../styles/home.css";
 import { WelcomePage } from "./welcomePage";
-import { Connection } from "./Connection";
 
-export const Home = () => (
+export const Connection = () => (
 	<div className="text-center mt-5">
-		<WelcomePage/>
 		
+		<CharacterCard/>
 	
 	</div>
 );
