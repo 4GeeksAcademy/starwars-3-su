@@ -9,6 +9,9 @@ import injectContext from "./store/appContext";
 import { CharacterDescription } from "./views/characterDescription";
 import { WelcomePage } from "./views/welcomePage";
 import { Connection } from "./views/Connection";
+import { PlanetDescription } from "./views/planetDescription";
+import { StarshipDescription} from "./views/starshipsDescription"
+ 
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -30,6 +33,8 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/character-description/:id" element={<CharacterDescription/>}/>
+						<Route path="/planet-description/:id" element={<PlanetDescription />}/>
+						{/* <Route path="/starships-description/:id" element={<StarshipDescription />}/> */}
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
@@ -39,5 +44,4 @@ const Layout = () => {
 		</div>
 	);
 };
-
 export default injectContext(Layout);

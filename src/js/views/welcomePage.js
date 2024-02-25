@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Connection } from "./Connection";
+import {Connection}  from "./Connection";
 
 export const WelcomePage = props => {
     const { store, actions } = useContext(Context);
@@ -10,11 +10,11 @@ export const WelcomePage = props => {
     return (
         <div className="jumbotron">
 
-            <div class="fade"></div>
+            <div className="fade"></div>
 
-            <section class="star-wars">
-                <div class="crawl">
-                    <div class="title">
+            <section className="star-wars">
+                <div className="crawl">
+                    <div className="title">
                         <p>Episode IV</p>
                         <h1>A New Hope</h1>
                     </div>
@@ -29,11 +29,11 @@ export const WelcomePage = props => {
                 
                
             </section>
-            <body>
+            <section className="body">
             <Link to="./Connection">
                     <button className=" btn btn-warning">button</button>
                 </Link>
-            </body>
+            </section >
         </div>
     );
 };

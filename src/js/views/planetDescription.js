@@ -5,17 +5,17 @@ import { useParams } from "react-router-dom";
 
 import "../../styles/descriptionCard.css";
 
-export const CharacterDescription = () => {
-    const [character, setCharacter] = useState({})
+export const PlanetDescription = () => {
+    const [planet, setPlanet] = useState({})
     const { id } = useParams()
     useEffect(() => {
-        async function getCharacter() {
-            const response = await fetch("https://www.swapi.tech/api/people/" + id)
+        async function getPlanet() {
+            const response = await fetch("https://www.swapi.tech/api/planets/" + id)
             const data = await response.json()
-            setCharacter(data.result.properties)
+            setPlanet(data.result.properties)
         }
-        getCharacter()
-        console.log(character)
+        getPlanet()
+        console.log(planet)
     }, [])
     return (
         <section>
@@ -27,14 +27,14 @@ export const CharacterDescription = () => {
                 <div className="right"><img className="helmet"
                     src="http://res.cloudinary.com/prvnbist/image/upload/v1508603573/helmet.png" alt="helmet" />
                     <div className="productInfo">
-                        <h1>{character.name} </h1>
+                        <h1>{planet.name} </h1>
 
                         <div className="details">
                             <div className="size">
-                                <h4>Height: {character.height}</h4>
-                                <h4>Mass: {character.mass}</h4>
-                                <h4>Hair Color: {character.hair_color}</h4>
-                                <h4>Eye Color: {character.eye_color}</h4>
+                            <h4>Population: {planet.population}</h4>
+                              <h4>Climate: {planet.climate}</h4>
+                                <h4>surface_water: {planet.surface_water}</h4>
+                                <h4>gravity: {planet.gravity}</h4>
                             </div>
 
                         </div>
@@ -47,3 +47,5 @@ export const CharacterDescription = () => {
         </section>
     )
 }
+
+

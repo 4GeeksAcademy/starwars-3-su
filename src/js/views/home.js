@@ -1,5 +1,6 @@
 import React from "react";
 import { CharacterCard } from "../component/characterCard";
+import { planetCard } from "../component/planetCard";
 import "../../styles/home.css";
 import { WelcomePage } from "./welcomePage";
 import { Connection } from "./Connection";
