@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-export const StarshipCard = () => {
+export default function StarshipsCard() {
     const [starships, setStarships] = useState([]);
     const { store, actions } = useContext(Context);
 
